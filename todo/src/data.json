@@ -1,0 +1,6 @@
+[
+  { "items": "desayunar", "id": "desayunar" },
+  { "items": "ducha", "id": "ducha"},
+  { "items": "cepillarse los dientes", "id": "cepillarse los dientes"},
+  { "items": "trabajar", "id": "trabajar"}
+  ]

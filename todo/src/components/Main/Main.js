@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './Main.css';
-import Card from '../Card/Card';
+import List from '../List/List';
 
 class Main extends Component {
   
   render() {
     return (
       <main>
-        <Card/>
+        <List/>
       </main>
     );
   }
