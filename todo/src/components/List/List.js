@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './TodoItems.css';
+import './List.css';
 
-class TodoItems extends Component {
+class List extends Component {
   createTasks(item) {
     return <li key={item.key}>{item.text}</li>
   }
@@ -18,4 +18,14 @@ class TodoItems extends Component {
   }
 };
  
-export default TodoItems;
+export default List;
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import TodoItems from "../List/List";
+import List from "../List/List";
+//import data from '../../data.json'
+import { v4 as uuidv4 } from 'uuid'
 
-class TodoList extends Component {
+class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,7 +17,7 @@ class TodoList extends Component {
     if (this._inputElement.value !== "") {
       let newItem = {
         text: this._inputElement.value,
-        key: Date.now()
+        key: uuidv4()
       };
    
       this.setState((prevState) => {
@@ -27,7 +29,7 @@ class TodoList extends Component {
       this._inputElement.value = "";
     }
      
-    console.log(this.state.items);
+    //console.log(this.state.items);
        
     e.preventDefault();
   }
@@ -44,10 +46,10 @@ class TodoList extends Component {
           <button type="submit">Add</button>
         </form>
         </div>
-        <TodoItems entries={this.state.items}/>
+        <List entries={this.state.items}/>
       </div>
     );
   }
 }
  
-export default TodoList;
+export default Card;
