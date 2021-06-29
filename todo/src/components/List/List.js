@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import data from "../../data.json";
 import Cards from "../Card/Card";
 import { v4 as uuidv4 } from 'uuid';
+import './List.scss'
 
 export default class Main extends Component {
   constructor(props) {
@@ -43,20 +44,17 @@ export default class Main extends Component {
   
   render() {
     return (
-      <article>
-        <h2>TODO LIST</h2>
+      <article className='List'>
+        <h2 className='Title'>TODO LIST</h2>
 
-        <form onSubmit={this.handleSubmit}>
-          <label>Añade tarea</label>
-          <br />
-          <input type="text" name="newTask"></input>
-          <br />
+        <form className='addItemForm' onSubmit={this.handleSubmit}>
+          <input type="text" name="newTask" placeholder='Añade tarea'></input>
           <input type="submit" value="Add"></input>
         </form>
-        {this.renderCard()}
-        <br />
+        <div className="container">
+          {this.renderCard()}
+        </div>
         <button onClick={this.removeAllCards}>Borrar todo</button>
-        <br /> <br />
         <button onClick={this.resetCards}>Resetear</button>
         
       </article>

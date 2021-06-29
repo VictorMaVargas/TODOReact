@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Card.scss'
 
 export class Card extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ export class Card extends Component {
     //let {items, id} = this.props.data
     console.log(this.props.data.task.length);
     return (
-      <section>
+      <section className='Card'>
         <p>Tarea:{this.props.data.task.length>30 ? this.props.data.task.slice(0,30) + "...": this.props.data.task}</p>
         <button onClick={this.props.remove}>Borrar tarea</button>
       </section>
@@ -21,6 +22,3 @@ export class Card extends Component {
   }
 }
 export default Card
-
-{/* <p>Tarea:{this.props.data.task||this.state.task}</p>
- this.props.data.task.length>10 ? this.state.task : this.props.data.task */}

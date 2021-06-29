@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import './Main.css';
 import List from '../List/List';
+import './Main.scss'
 
 class Main extends Component {
   
   render() {
     return (
-      <main>
-        <List/>
+      <main className='Main'>
+        <div className="wrapper">
+          <List/>
+        </div>
       </main>
     );
   }
