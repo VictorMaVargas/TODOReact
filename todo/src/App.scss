@@ -1,0 +1,18 @@
+@import './Sass/colors';
+
+button, input[type='submit'] {
+    justify-self: center;
+    align-self: center;
+    background: $color-primary-dark;
+    padding: 6px 12px;
+    border-radius: 12px;
+    color: white;
+    &:active {
+        background: $color-primary;
+        color: white;
+        font-weight: bolder;
+    }
+}
+button {
+    margin-top: 10px;
+}

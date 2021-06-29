@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './Main.css';
-import ToDoList from '../Card/Card'
+import List from '../List/List';
 
 class Main extends Component {
+  
   render() {
     return (
       <main>
-        <ToDoList/>
+        <List/>
       </main>
     );
   }

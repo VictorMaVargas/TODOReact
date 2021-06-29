@@ -1,0 +1,29 @@
+@import '../../Sass/colors';
+@import '../../Sass/mixins';
+
+.Card {
+    @include flex-column-center();
+    background: $color-bg;
+    box-shadow: 0 4px 12px $color-primary-dark, -4px -4px 8px $color-primary-light;
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px;
+    margin: 12px 64px;
+}
+
+// @media screen and (min-width: 565px) and (max-width: 959px) {
+//     .Card {
+//         width: 50%;
+//         &:first-child {
+//             margin-top: 0;
+//         }
+//     }
+//     }
+//     @media screen and (min-width: 961px) {
+//     .Card {
+//         width: 33%;
+//         &:first-child {
+//             margin-top: 0;
+//         }
+//     }
+//     }

@@ -1,5 +1,6 @@
 [
-    { "item": "Desayunar"},
-    { "item": "Ducha"},
-    { "item": "Cepillarse los dientes"}
-]
+  {"task": "desayunar", "id": "desayunar" },
+  {"task": "ducha", "id": "ducha"},
+  {"task": "cepillarse los dientes", "id": "cepillarse los dientes"},
+  {"task": "trabajar", "id": "trabajar"}
+  ]

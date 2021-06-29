@@ -1,52 +1,26 @@
 import React, { Component } from "react";
-import List from '../List/List';
-import data from '../../data.json';
-import { v4 as uuidv4 } from 'uuid';
- 
-class TodoList extends Component {
+
+export class Card extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      items: data
-    }
-  }
-   
-  handleSubmit = (e) => {
-    if (this._inputElement.value !== "") {
-      var newItem = {
-        text: this._inputElement.value,
-        key: uuidv4()
-      };
-   
-      this.setState((prevState) => {
-        return { 
-          items: prevState.items.concat(newItem) 
-        };
-      });
-     
-      this._inputElement.value = "";
-    }
-     
-    console.log(this.state.items);
-       
-    e.preventDefault();
+      task: "Tiene más de 20 caracteres"
+    };
   }
 
   render() {
+    //let {items, id} = this.props.data
+    console.log(this.props.data.task.length);
     return (
-      <div className="todoListMain">
-      <div className="header">
-        <form onSubmit={this.handleSubmit}>
-          <input ref={(a) => this._inputElement = a} placeholder="Introduce Tarea" id="item">
-          </input>
-          <button type="submit">add</button>
-        </form>
-      </div>
-      <List entries={this.state.items}/>
-    </div>
+      <section>
+        <p>Tarea:{this.props.data.task.length>30 ? this.props.data.task.slice(0,30) + "...": this.props.data.task}</p>
+        <button onClick={this.props.remove}>Borrar tarea</button>
+      </section>
     );
   }
 }
- 
-export default TodoList;
+export default Card
+
+{/* <p>Tarea:{this.props.data.task||this.state.task}</p>
+ this.props.data.task.length>10 ? this.state.task : this.props.data.task */}
