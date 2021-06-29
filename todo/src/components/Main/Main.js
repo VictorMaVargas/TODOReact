@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import './Main.css';
-import ToDoList from '../ToDoList/ToDoList'
+import ToDoList from '../Card/Card'
 
 class Main extends Component {
-  // constructor(props){
-    // super(props);
-    // this.state = {};
-  // }
-
   render() {
     return (
       <main>
