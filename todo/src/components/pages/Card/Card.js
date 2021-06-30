@@ -21,4 +21,8 @@ export class Card extends Component {
     );
   }
 }
+<<<<<<< HEAD:todo/src/components/Card/Card.js
 export default Card
+=======
+export default Card
+>>>>>>> victor:todo/src/components/pages/Card/Card.js

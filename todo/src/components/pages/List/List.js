@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import data from "../../data.json";
+import data from "../../../data.json";
 import Cards from "../Card/Card";
 import { v4 as uuidv4 } from 'uuid';
 import './List.scss'
@@ -60,16 +60,4 @@ export default class Main extends Component {
       </article>
     );
   }
-
-
-
 }
-
-
-
-
-
-
-
-
-
