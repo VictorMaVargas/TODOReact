@@ -1,7 +1,13 @@
-/*
- * Home css File
-*/
+@import '../../../Sass/colors';
+@import '../../../Sass/mixins';
 
 .Home {
-    /* propertys here */
+    background: $color-primary-dark;
+    width: 100%;
+    margin: 0;
+    @include flex-column-center();
+    > h1 {
+        font-size: 44px;
+        margin-bottom: 12px;
+    }
 }

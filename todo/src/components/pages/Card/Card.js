@@ -6,12 +6,11 @@ export class Card extends Component {
     super(props);
 
     this.state = {
-      task: "Tiene más de 20 caracteres"
+      task: "Tiene más de 30 caracteres"
     };
   }
 
   render() {
-    //let {items, id} = this.props.data
     console.log(this.props.data.task.length);
     return (
       <section className='Card'>
@@ -21,8 +20,5 @@ export class Card extends Component {
     );
   }
 }
-<<<<<<< HEAD:todo/src/components/Card/Card.js
+
 export default Card
-=======
-export default Card
->>>>>>> victor:todo/src/components/pages/Card/Card.js

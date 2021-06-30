@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import "./Nav.scss";
 
 class Nav extends Component {
-
   render() {
     return (
       <nav className="Nav">
@@ -12,7 +11,7 @@ class Nav extends Component {
             <Link className="Nav__link" to="/">Home</Link>
           </li>
           <li>
-            <Link to="/todo"> TODO List</Link>
+            <Link to="/todo"> ToDo List</Link>
           </li>
           <li>
             <Link to="/weather"> Weather Info</Link>

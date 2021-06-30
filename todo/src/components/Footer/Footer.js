@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './Footer.scss';
-const apiKey = process.env.REACT_APP_API_KEY
+const apiKey = process.env.REACT_APP_API_KEY;
 
 class Footer extends Component{
   constructor(props) {
@@ -11,23 +11,21 @@ class Footer extends Component{
       }
   }
   
-  
   async componentDidMount() {
-      const URL = (`https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=${apiKey}`)
+      const URL = (`https://api.openweathermap.org/data/2.5/weather?q=Madrid&appid=${apiKey}&units=metric`)
       let res = await axios.get(URL);
       let data = res.data;
-      this.setState({ register: res.data });
+      this.setState({ register: res.data.main.temp });
       console.log(data.main.temp);
     }
 
-    render(){
-      //let data = this.state.data
-          return(
-              <div>
-                {/* <p>Temperatura en Madrid: {this.data.main.temp}</p> */}
-             </div>
-          );
-      }
+  render(){
+    return(
+        <div className='Footer'>
+          <p>Temperatura en Madrid: {this.state.register}°C</p>
+        </div>
+    );
   }
+}
   
 export default Footer;

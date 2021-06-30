@@ -1,7 +1,11 @@
-/*
- * Footer css File
-*/
+@import '../../Sass/mixins';
+@import '../../Sass/colors';
 
-.Footer {
-    /* propertys here */
+.Footer{
+    
+    width: 100%;
+    background: $color-primary;
+    padding: 24px;
+    color: $color-bg;
+    @include flex-column-center();
 }

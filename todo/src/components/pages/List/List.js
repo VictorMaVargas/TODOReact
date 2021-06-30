@@ -13,12 +13,8 @@ export default class Main extends Component {
     };
   }
 
-  addCard = (newTasks) => {
-    
-    this.setState({ tasks: [...this.state.tasks, { task: newTasks, id: uuidv4()}] });
-  };
+  addCard = (newTasks) => this.setState({ tasks: [...this.state.tasks, { task: newTasks, id: uuidv4()}] });
 
-  
   renderCard = () => this.state.tasks.map((task) => 
      <Cards data={task} key={task.id} remove={() => this.removeCard(task.id)} />
   )
@@ -41,12 +37,10 @@ export default class Main extends Component {
     this.addCard(newTask);
   };
 
-  
   render() {
     return (
       <article className='List'>
         <h2 className='Title'>TODO LIST</h2>
-
         <form className='addItemForm' onSubmit={this.handleSubmit}>
           <input type="text" name="newTask" placeholder='Añade tarea'></input>
           <input type="submit" value="Add"></input>
@@ -56,7 +50,6 @@ export default class Main extends Component {
         </div>
         <button onClick={this.removeAllCards}>Borrar todo</button>
         <button onClick={this.resetCards}>Resetear</button>
-        
       </article>
     );
   }

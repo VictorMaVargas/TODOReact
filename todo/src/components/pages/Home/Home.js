@@ -1,20 +1,17 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Home.scss';
 
 class Home extends Component {
-
-
   render() {
     return (
-      <div>
+      <div className='Home'>
         <h1>Bienvenido, pana!!</h1>
         <Link to="/todo">
-        <button>
-          TODO List
-        </button>
+          <button>
+            ToDo List
+          </button>
         </Link>
-        
       </div>
     );
   }

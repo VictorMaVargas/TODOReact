@@ -1,7 +1,19 @@
-/*
- * Nav css File
-*/
+@import '../../Sass/mixins';
+@import '../../Sass/colors';
 
-.Nav {
-    /* propertys here */
+.Nav{
+    width: 100%;
+    background: $color-primary;
+    padding: 24px;
+    > ul{
+        list-style: none;
+        @include flex-row-space-between();
+        li{
+            text-indent: 0;
+            a{
+                text-decoration: none;
+                color: $color-bg;
+            }
+        }
+    }
 }
