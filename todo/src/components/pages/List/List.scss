@@ -1,0 +1,33 @@
+@import '../../../Sass/colors';
+@import '../../../Sass/mixins';
+
+.List {
+    @include flex-column-center();
+    background: $color-primary-light;
+    border-radius: 12px;
+    padding: 24px;
+    > .addItemForm {
+        @include flex-row();
+        margin-bottom: 32px;
+    }
+    > .container {
+        @include flex-row-center();
+    }
+}
+
+// @media screen and (min-width: 565px) and (max-width: 959px) {
+//     .List {
+//         width: 50%;
+//         &:first-child {
+//             margin-top: 0;
+//         }
+//     }
+//     }
+//     @media screen and (min-width: 961px) {
+//     .List {
+//         width: 33%;
+//         &:first-child {
+//             margin-top: 0;
+//         }
+//     }
+//     }
